@@ -18,7 +18,7 @@ Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des
 
 ## Beispiel
 Werden der Reihe nach die Ziffern 1 bis 9 in einen Binärbaum eingefügt, entspricht dieser Binärbaum quasi einer Liste. Sucht man nun nach dem Inhalt '9', müssen neun Vergleichsoperationen durchgeführt werden, um den Inhalt zu finden.
-![Suche in einem Binärbaum]
+![Suche in einem Binärbaum](https://github.com/stefschneider1970/Tutorials/blob/master/Probleme_Binaerbaum.png)
 
 
 # Anwendungsgebiete
