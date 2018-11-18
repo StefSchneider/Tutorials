@@ -10,7 +10,7 @@ Der AVL Baum beginnt wir der Binärbaum mit einer sogenannten Wurzel. Diese best
 
 ### Beispiel
 Um die Funktionsweise eines herkömmlichn Binärbaum und eines AVL Baums zu verstehen, fügen wir folgende Inhalte der Reihe nach a) in   einen Binärbaum und b) in einen AVL Baum ein: (1): Peter, (2): Tim, (3): Doro, (4): Annika, (5): Mara, (6): Aaron, (7): Victor, (8):   Chris, (9): Carsten, (10): Victoria, (11): Christine.  
-!["Vergleich Binärbaum und AVL Baum"](https://github.com/stefschneider1970/Tutorials/blob/master/Vergleich_Binaerbaum_AVL_Baum.png?raw=true)
+!["Vergleich Binärbaum und AVL Baum"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Vergleich_Binaerbaum_AVL_Baum.png)
 
 Beim Einfügen der Inhalte in den Binärbaum werden zunächst die bereits bestehenden Inhalte mit dem neu einzufügenden Inhalt verglichen. Ist der neue Inhalt kleiner als der Vergleichsinhalt, wird im Baum nach links gegangen, ist er größer, wird nach rechts gegangen. Am Ende eines Astes wird der neue Inhalt entweder als linkes oder rechtes Kind eingefügt. Damit verschachtelt sich der Binärbaum immer mehr und - je nach einzufügenden Inhalten - erhält er viele Ebenen. In unserem Beispiel hat der Binärbaum bereits fünf Ebenen - teilweise bedingt durch eine "unglückliche" Reihenfolge der einzufügenden inhalte.  
 
