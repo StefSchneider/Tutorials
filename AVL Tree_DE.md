@@ -38,7 +38,8 @@ In AVL Bäumen können die Inhalte in verschiedenen Reihenfolgen - beispielsweis
 Die Inorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
 1. linker Kind-Knoten
 2. Eltern-Knoten
-3. rechter Kind-Knoten
+3. rechter Kind-Knoten  
+
 Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgelesen, d.h. der Inhalt der im AVL Baum ganz links steht.
 
 ## Preorder-Traversierung
