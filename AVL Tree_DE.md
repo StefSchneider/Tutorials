@@ -8,8 +8,7 @@ Der AVL Baum beginnt wir der Binärbaum mit einer sogenannten Wurzel. Diese best
 
      Beispiel
      Um die Funktionsweise eines herkömmlichn Binärbaum und eines AVL Baums zu verstehen, fügen wir folgende Inhalte der Reihe nach a) in    einen Binärbaum und b) in einen AVL Baum ein: (1): Peter, (2): Tim, (3): Doro, (4): Annika, (5): Mara, (6): Aaron, (7): Victor, (8):   Chris, (9): Carsten, (10): Victoria, (11): Christine.  
-
-     !["Vergleich Binärbaum und AVL Baum"](https://github.com/stefschneider1970/Tutorials/blob/master/Vergleich_Binaerbaum_AVL_Baum.png?raw=true)
+!["Vergleich Binärbaum und AVL Baum"](https://github.com/stefschneider1970/Tutorials/blob/master/Vergleich_Binaerbaum_AVL_Baum.png?raw=true)
      
 
 
