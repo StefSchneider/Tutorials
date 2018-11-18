@@ -32,11 +32,23 @@ Werden der Reihe nach die Ziffern 1 bis 9 in einen Binärbaum eingefügt, entspr
 AVL Bäume können genutzt werden, um große Datenmengen zu speichern, die anschließend nach bestimmten Inhalten durchsucht werden. Das können zum Beispiel Wörterbücher sein. Durch die gleichmäßige Ausrichtung verkürzt sich die Suche nach einem bestimmten Wort erheblich im Vergleich zum Benärbaum.
 
 # Sortierverfahren
-In AVL Bäumen können die Inhalte in verschiedenen Reihenfolgen - beispielsweise zuerst der Elternknoten, anschließend die Kinderknoten - ausgelsen werden. Man nennt dies auch Traviersierungsarten.
+In AVL Bäumen können die Inhalte in verschiedenen Reihenfolgen - beispielsweise zuerst der Elternknoten, anschließend die Kinderknoten - ausgelesen werden. Man nennt dies auch Traviersierungsarten. AVL Bäume können in der Regel anhand von vier Traversierungsarten ausgelesen werden: der Inorder-Traversierung, der Preorder-Traversierung, der Postorder-Traversierung und der Levelorder-Traversierung. Dabei können bis auf die Levelorder-Traversierung alle Traversierungsarten rekursiv programmiert werden.
 
 ## Inorder-Traversierung
+Die Inorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
+1. linker Kind-Knoten
+2. Eltern-Knoten
+3. rechter Kind-Knoten
+Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgelesen, d.h. der Inhalt der im AVL Baum ganz links steht.
+
 ## Preorder-Traversierung
+
 ## Postorder-Traversierung
+
 ## Levelorder-Traversierung
+Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene ausgelesen, beginnend bei der Wurzel. Durch die fehlende Rekursivität müssen die jeweiligen Kinder-Knoten in einer Queue abgespeichert werden und nach und nach ausgelsen werden.  
+
+In unserem Beispiel wäre das Ergebnis der Levelorder-Traversierung:
+Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (= Ebene 3) - Annika - Christine - Mara - Victoria (= Ebene 4)
 
 # Klassen und Methoden
