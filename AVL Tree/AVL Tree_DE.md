@@ -54,4 +54,6 @@ Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene ausgelesen,
 In unserem Beispiel wäre das Ergebnis der Levelorder-Traversierung:
 Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (= Ebene 3) - Annika - Christine - Mara - Victoria (= Ebene 4)
 
+![Vergleich der Traversierungsarten](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Vergleich_Travesierungsarten_neu.png)
+
 # Klassen und Methoden
