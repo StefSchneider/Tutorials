@@ -11,7 +11,9 @@ Um die Funktionsweise eines herkömmlichn Binärbaum und eines AVL Baums zu vers
 !["Vergleich Binärbaum und AVL Baum"](https://github.com/stefschneider1970/Tutorials/blob/master/Vergleich_Binaerbaum_AVL_Baum.png?raw=true)
 
 Beim Einfügen der Inhalte in den Binärbaum werden zunächst die bereits bestehenden Inhalte mit dem neu einzufügenden Inhalt verglichen. Ist der neue Inhalt kleiner als der Vergleichsinhalt, wird im Baum nach links gegangen, ist er größer, wird nach rechts gegangen. Am Ende eines Astes wird der neue Inhalt entweder als linkes oder rechtes Kind eingefügt. Damit verschachtelt sich der Binärbaum immer mehr und - je nach einzufügenden Inhalten - erhält er viele Ebenen. In unserem Beispiel hat der Binärbaum bereits fünf Ebenen - teilweise bedingt durch eine "unglückliche" Reihenfolge der einzufügenden inhalte.  
+
 Das Verfahren zum Einfügen neuer Inhalte in einen AVL Baum ist identisch. Allerdings prüft der AVL Baum nach jedem neuen Einfügen, ob er sich neu ausrichten muss. Das ist dann der Fall, wenn eine Seite ein Übergewicht hat, d.h. die Anzahl der Ebenen höher ist als auf der anderen Seite. Durch diese ständige Neuausrichtung verschieben sich die einzelnen Knoten, d.h. Eltern-Kind-Verbindungen werden neu zusammengefügt und Inhalte neu i Baum platziert. In unserem Beispiel ist "Doro" der Inhalt der Wurzel anstatt "Peter" beim Binärbaum. Mit dem Verschieben der Knoten nimmt beim AVL Baum aber gleichzeitig die Anzahl der Ebenen ab. Damit werden Inhalte schneller gefunden, da die Anzahl der Vergleichsaktionen abnimmt.  
+
 Beginnt man die Suche nach "Christine" bei der Wurzel, sind beim Binärbaum fünf Vergleichsaktionen nötig, beim AVL Baum nur noch vier Vergleichasaktionen.
 
 
