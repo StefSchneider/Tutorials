@@ -8,7 +8,7 @@ Der AVL Baum beginnt wir der Binärbaum mit einer sogenannten Wurzel. Diese best
 
 *Kurzbescheibung Knoten + Grafik*
 
-### Beispiel
+### Beispiel 1
 Um die Funktionsweise eines herkömmlichn Binärbaum und eines AVL Baums zu verstehen, fügen wir folgende Inhalte der Reihe nach a) in   einen Binärbaum und b) in einen AVL Baum ein: (1): Peter, (2): Tim, (3): Doro, (4): Annika, (5): Mara, (6): Aaron, (7): Victor, (8):   Chris, (9): Carsten, (10): Victoria, (11): Christine.  
 !["Vergleich Binärbaum und AVL Baum"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Vergleich_Binaerbaum_AVL_Baum.png)
 
@@ -25,7 +25,7 @@ Beginnt man die Suche nach "Christine" bei der Wurzel, sind beim Binärbaum fün
 # Vorteile und Nachteile
 Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des AVL Baums.
 
-### Beispiel
+### Beispiel 2
 Werden der Reihe nach die Ziffern 1 bis 9 in einen Binärbaum eingefügt, entspricht dieser Binärbaum quasi einer Liste. Sucht man nun nach dem Inhalt '9', müssen neun Vergleichsoperationen durchgeführt werden, um den Inhalt zu finden.
 ![Suche in einem Binärbaum](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Probleme_Binaerbaum_neu.png)
 
@@ -42,19 +42,27 @@ In AVL Bäumen können die Inhalte in verschiedenen Reihenfolgen - beispielsweis
 ## Inorder-Traversierung
 Die Inorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
 1. linker Kind-Knoten
-2. Eltern-Knoten
+2. Eltern-Knoten (Wurzel)
 3. rechter Kind-Knoten  
 
 Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgelesen, d.h. der Inhalt der im AVL Baum ganz links steht.
 
 ## Preorder-Traversierung
+Die Preorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
+1. Eltern-Knoten (Wurzel)
+2. linker Kind-Knoten
+3. rechter Kind-Knoten  
 
 ## Postorder-Traversierung
+Die Postorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
+1. linker Kind-Knoten
+2. rechter Kind-Knoten
+3. Eltern-Knoten (Wurzel)  
 
 ## Levelorder-Traversierung
 Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene ausgelesen, beginnend bei der Wurzel. Durch die fehlende Rekursivität müssen die jeweiligen Kinder-Knoten in einer Queue abgespeichert werden und nach und nach ausgelsen werden.  
 
-In unserem Beispiel wäre das Ergebnis der Levelorder-Traversierung:
+Bezogen auf unser Beispiel 1 wäre das Ergebnis der Levelorder-Traversierung:
 Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (= Ebene 3) - Annika - Christine - Mara - Victoria (= Ebene 4)
 
 
