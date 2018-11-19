@@ -45,7 +45,10 @@ Die Inorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus:
 2. Eltern-Knoten (Wurzel)
 3. rechter Kind-Knoten  
 
-Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgelesen, d.h. der Inhalt der im AVL Baum ganz links steht.
+Mit den Daten von Beispiel 1 würde die Inorder-Traversierung folgendes Ergebnis liefern: Aaron - Annika - Carsten - Chris - Christine - Doro - Mara - Peter - Tim - Victor - Victoria.
+
+Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgelesen, d.h. der Inhalt der im AVL Baum ganz links steht. Diese Form der Traversierung sorgt für eine Sortierung von klein nach groß.
+
 
 ## Preorder-Traversierung
 Die Preorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
@@ -53,17 +56,26 @@ Die Preorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus:
 2. linker Kind-Knoten
 3. rechter Kind-Knoten  
 
+Die Reihenfolge der Preorder-Traversierung käme für Beispiel 1 zu folgendem Ergebnis: Doro - Carsten - Aaron - Annika - Chris - Christine - Tim - Peter - Mara - Victor - Victoria.
+
+Einsatzgbiet?
+
 ## Postorder-Traversierung
 Die Postorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
 1. linker Kind-Knoten
 2. rechter Kind-Knoten
 3. Eltern-Knoten (Wurzel)  
 
+Bei der Postorder-Traversierung würde für Beispiel 1 folgendes Ergebnis angezeigt: Annika - Aaron - Christine - Chris - Carsten - Mara - Peter - Victoria - Victor - Tim
+
+Einsatzgebiet?
+
 ## Levelorder-Traversierung
 Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene ausgelesen, beginnend bei der Wurzel. Durch die fehlende Rekursivität müssen die jeweiligen Kinder-Knoten in einer Queue abgespeichert werden und nach und nach ausgelsen werden.  
 
 Bezogen auf unser Beispiel 1 wäre das Ergebnis der Levelorder-Traversierung:
-Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (= Ebene 3) - Annika - Christine - Mara - Victoria (= Ebene 4)
+Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (= Ebene 3) - Annika - Christine - Mara - Victoria (= Ebene 4).
 
+Einsatzgebiet?
 
 # Klassen und Methoden
