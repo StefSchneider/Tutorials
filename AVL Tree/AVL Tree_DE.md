@@ -8,6 +8,12 @@ Der AVL Baum beginnt wir der Binärbaum mit einer sogenannten Wurzel. Diese best
 
 *Kurzbescheibung Knoten + Grafik*
 
+*Höhe*
+*Re-Balancing*
+*Linksrotation*
+*Rechtsrotation*
+
+
 ### Beispiel 1
 Um die Funktionsweise eines herkömmlichn Binärbaum und eines AVL Baums zu verstehen, fügen wir folgende Inhalte der Reihe nach a) in   einen Binärbaum und b) in einen AVL Baum ein: (1): Peter, (2): Tim, (3): Doro, (4): Annika, (5): Mara, (6): Aaron, (7): Victor, (8):   Chris, (9): Carsten, (10): Victoria, (11): Christine.  
 !["Vergleich Binärbaum und AVL Baum"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Vergleich_Binaerbaum_AVL_Baum.png)
@@ -23,15 +29,17 @@ Beginnt man die Suche nach "Christine" bei der Wurzel, sind beim Binärbaum fün
 
 
 # Vorteile und Nachteile
-Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des AVL Baums.
+Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des AVL Baums. So lässt sich die Anzahl der Vergleichsaktionen bei großen Datenmengen erheblich verkürzen. Damit wird eine zufällig "glückliche" oder "unglückliche" Reihenfolge der Daten beim Einfügen in den Baum eliminiert.
 
 ### Beispiel 2
 Werden der Reihe nach die Ziffern 1 bis 9 in einen Binärbaum eingefügt, entspricht dieser Binärbaum quasi einer Liste. Sucht man nun nach dem Inhalt '9', müssen neun Vergleichsoperationen durchgeführt werden, um den Inhalt zu finden.
 ![Suche in einem Binärbaum](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Probleme_Binaerbaum_neu.png)
 
+Die Erzeugung eines AVL Baums ist allerdings aufwendiger als die eines Binärbaums, da im Zweifelsfall mit jedem neuen einzufügenden Inhalt eine Neuausrichtung des AVL Baums stattfindet - was zusätzliche Rechenzeit erzeugt. Ein AVL Baum eignet sich daher vor allem, wenn bei der Initialisierung große Datenmengen eingelesen werden, die später nur noch punktuell ergänzt werden, dafür aber eine schnelle Suche nach Inhalten benötigt wird.
+
 
 # Anwendungsgebiete
-AVL Bäume können genutzt werden, um große Datenmengen zu speichern, die anschließend nach bestimmten Inhalten durchsucht werden. Das können zum Beispiel Wörterbücher sein. Durch die gleichmäßige Ausrichtung verkürzt sich die Suche nach einem bestimmten Wort erheblich im Vergleich zum Benärbaum.
+AVL Bäume können genutzt werden, um große Datenmengen zu speichern, die anschließend nach bestimmten Inhalten durchsucht werden. Das können zum Beispiel Wörterbücher sein. Durch die gleichmäßige Ausrichtung verkürzt sich die Suche nach einem bestimmten Wort erheblich im Vergleich zum Binärbaum.
 
 # Sortierverfahren
 In AVL Bäumen können die Inhalte in verschiedenen Reihenfolgen - beispielsweise zuerst der Elternknoten, anschließend die Kinderknoten - ausgelesen werden. Man nennt dies auch Traviersierungsarten. AVL Bäume können in der Regel anhand von vier Traversierungsarten ausgelesen werden: der Inorder-Traversierung, der Preorder-Traversierung, der Postorder-Traversierung und der Levelorder-Traversierung. Dabei können bis auf die Levelorder-Traversierung alle Traversierungsarten rekursiv programmiert werden.
@@ -58,7 +66,7 @@ Die Preorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus:
 
 Die Reihenfolge der Preorder-Traversierung käme für Beispiel 1 zu folgendem Ergebnis: Doro - Carsten - Aaron - Annika - Chris - Christine - Tim - Peter - Mara - Victor - Victoria.
 
-Einsatzgbiet?
+*Einsatzgbiet?*
 
 ## Postorder-Traversierung
 Die Postorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
@@ -68,7 +76,7 @@ Die Postorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus:
 
 Bei der Postorder-Traversierung würde für Beispiel 1 folgendes Ergebnis angezeigt: Annika - Aaron - Christine - Chris - Carsten - Mara - Peter - Victoria - Victor - Tim
 
-Einsatzgebiet?
+*Einsatzgebiet?*
 
 ## Levelorder-Traversierung
 Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene ausgelesen, beginnend bei der Wurzel. Durch die fehlende Rekursivität müssen die jeweiligen Kinder-Knoten in einer Queue abgespeichert werden und nach und nach ausgelsen werden.  
@@ -76,6 +84,6 @@ Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene ausgelesen,
 Bezogen auf unser Beispiel 1 wäre das Ergebnis der Levelorder-Traversierung:
 Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (= Ebene 3) - Annika - Christine - Mara - Victoria (= Ebene 4).
 
-Einsatzgebiet?
+*Einsatzgebiet?*
 
 # Klassen und Methoden
