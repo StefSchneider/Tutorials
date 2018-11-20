@@ -33,7 +33,7 @@ Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des
 
 ### Beispiel 2
 Werden der Reihe nach die Ziffern 1 bis 9 in einen Binärbaum eingefügt, entspricht dieser Binärbaum quasi einer Liste. Sucht man nun nach dem Inhalt '9', müssen neun Vergleichsoperationen durchgeführt werden, um den Inhalt zu finden.
-![Suche in einem Binärbaum](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Probleme_Binaerbaum_neu.png)
+![Suche in einem Binärbaum](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Probleme_Binaerbaum_V2.png)
 
 Die Erzeugung eines AVL Baums ist allerdings aufwendiger als die eines Binärbaums, da im Zweifelsfall mit jedem neuen einzufügenden Inhalt eine Neuausrichtung des AVL Baums stattfindet - was zusätzliche Rechenzeit erzeugt. Ein AVL Baum eignet sich daher vor allem, wenn bei der Initialisierung große Datenmengen eingelesen werden, die später nur noch punktuell ergänzt werden, dafür aber eine schnelle Suche nach Inhalten benötigt wird.
 
@@ -42,7 +42,7 @@ Die Erzeugung eines AVL Baums ist allerdings aufwendiger als die eines Binärbau
 AVL Bäume können genutzt werden, um große Datenmengen zu speichern, die anschließend nach bestimmten Inhalten durchsucht werden. Das können zum Beispiel Wörterbücher sein. Durch die gleichmäßige Ausrichtung verkürzt sich die Suche nach einem bestimmten Wort erheblich im Vergleich zum Binärbaum.
 
 # Sortierverfahren
-In AVL Bäumen können die Inhalte in verschiedenen Reihenfolgen - beispielsweise zuerst der Elternknoten, anschließend die Kinderknoten - ausgelesen werden. Man nennt dies auch Traviersierungsarten. AVL Bäume können in der Regel anhand von vier Traversierungsarten ausgelesen werden: der Inorder-Traversierung, der Preorder-Traversierung, der Postorder-Traversierung und der Levelorder-Traversierung. Dabei können bis auf die Levelorder-Traversierung alle Traversierungsarten rekursiv programmiert werden.
+In Binärbäumen und AVL Bäumen können die Inhalte in verschiedenen Reihenfolgen - beispielsweise zuerst der Elternknoten, anschließend die Kinderknoten - ausgelesen werden. Man nennt dies auch Traviersierungsarten. AVL Bäume können in der Regel anhand von vier Traversierungsarten ausgelesen werden: der Inorder-Traversierung, der Preorder-Traversierung, der Postorder-Traversierung und der Levelorder-Traversierung. Dabei können bis auf die Levelorder-Traversierung alle Traversierungsarten rekursiv programmiert werden.
 
 ![Vergleich der Traversierungsarten](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Vergleich_Travesierungsarten_neu.png)
 
