@@ -32,7 +32,7 @@ Beginnt man die Suche nach "Christine" bei der Wurzel, sind beim Binärbaum fün
 Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des AVL Baums. So lässt sich die Anzahl der Vergleichsaktionen bei großen Datenmengen erheblich verkürzen. Damit wird eine zufällig "glückliche" oder "unglückliche" Reihenfolge der Daten beim Einfügen in den Baum eliminiert.
 
 ### Beispiel 2
-Werden der Reihe nach die Ziffern 1 bis 9 in einen Binärbaum eingefügt, entspricht dieser Binärbaum quasi einer Liste. Sucht man nun nach dem Inhalt '9', müssen neun Vergleichsoperationen durchgeführt werden, um den Inhalt zu finden.
+Werden der Reihe nach die Ziffern 1 bis 9 in einen Binärbaum eingefügt, entspricht dieser Binärbaum quasi einer Liste. Sucht man nun nach dem Inhalt '9', müssen neun Vergleichsoperationen durchgeführt werden, um den Inhalt zu finden. Im umgekehrten Fall - das Einlesen der Ziffern 9 bis 1 - wird auch eine Liste erstellt. Auch hierbei müssen bis zu neun Vergleichsaktionen durchgeführt werden, um den gesuchten Inhalt zu finden.
 ![Suche in einem Binärbaum](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Probleme_Binaerbaum_V2.png)
 
 Die Erzeugung eines AVL Baums ist allerdings aufwendiger als die eines Binärbaums, da im Zweifelsfall mit jedem neuen einzufügenden Inhalt eine Neuausrichtung des AVL Baums stattfindet - was zusätzliche Rechenzeit erzeugt. Ein AVL Baum eignet sich daher vor allem, wenn bei der Initialisierung große Datenmengen eingelesen werden, die später nur noch punktuell ergänzt werden, dafür aber eine schnelle Suche nach Inhalten benötigt wird.
@@ -42,13 +42,13 @@ Die Erzeugung eines AVL Baums ist allerdings aufwendiger als die eines Binärbau
 AVL Bäume können genutzt werden, um große Datenmengen zu speichern, die anschließend nach bestimmten Inhalten durchsucht werden. Das können zum Beispiel Wörterbücher sein. Durch die gleichmäßige Ausrichtung verkürzt sich die Suche nach einem bestimmten Wort erheblich im Vergleich zum Binärbaum.
 
 # Sortierverfahren
-In Binärbäumen und AVL Bäumen können die Inhalte in verschiedenen Reihenfolgen - beispielsweise zuerst der Elternknoten, anschließend die Kinderknoten - ausgelesen werden. Man nennt dies auch Traviersierungsarten. AVL Bäume können in der Regel anhand von vier Traversierungsarten ausgelesen werden: der Inorder-Traversierung, der Preorder-Traversierung, der Postorder-Traversierung und der Levelorder-Traversierung. Dabei können bis auf die Levelorder-Traversierung alle Traversierungsarten rekursiv programmiert werden.
+In Binärbäumen und AVL Bäumen können die Inhalte in verschiedenen Reihenfolgen - beispielsweise zuerst der Elternknoten, anschließend die Kinderknoten - ausgelesen werden. Man nennt dies auch Traviersierungsarten. Bäume können in der Regel anhand von vier Traversierungsarten ausgelesen werden: der Inorder-Traversierung, der Preorder-Traversierung, der Postorder-Traversierung und der Levelorder-Traversierung. Dabei können bis auf die Levelorder-Traversierung alle Traversierungsarten rekursiv programmiert werden.
 
 ![Vergleich der Traversierungsarten](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Vergleich_Travesierungsarten_neu.png)
 
 
 ## Inorder-Traversierung
-Die Inorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
+Die Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
 1. linker Kind-Knoten
 2. Eltern-Knoten (Wurzel)
 3. rechter Kind-Knoten  
@@ -59,24 +59,24 @@ Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgel
 
 
 ## Preorder-Traversierung
-Die Preorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
+Die Preorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
 1. Eltern-Knoten (Wurzel)
 2. linker Kind-Knoten
 3. rechter Kind-Knoten  
 
 Die Reihenfolge der Preorder-Traversierung käme für Beispiel 1 zu folgendem Ergebnis: Doro - Carsten - Aaron - Annika - Chris - Christine - Tim - Peter - Mara - Victor - Victoria.
 
-*Einsatzgbiet?*
+*Einsatzgbiet? Nur für Binärbaum: Hierdurch erfolgt eine sog. Polnische Notation. Diese wird angewendet, wenn in dem Baum mathematische Funktionen abgebildet werden. In diesem Fall erhält die Wurzel die Operation und die Blätter die Operanden.*
 
 ## Postorder-Traversierung
-Die Postorder-Traversierung liest die AVL Baum nach folgendem Prinzip aus: 
+Die Postorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
 1. linker Kind-Knoten
 2. rechter Kind-Knoten
 3. Eltern-Knoten (Wurzel)  
 
 Bei der Postorder-Traversierung würde für Beispiel 1 folgendes Ergebnis angezeigt: Annika - Aaron - Christine - Chris - Carsten - Mara - Peter - Victoria - Victor - Tim
 
-*Einsatzgebiet?*
+*Einsatzgebiet? Nur für Binärbaum: Hierdurch erfolgt eine sog. umgekehrte polnische Notation. Diese wird zur Abarbeitung von mathematischen Funktionen verwendet. Als erstes kommen die Operanden, dann die Operation. Diese Art des Auslesens wird im Compilerbau verwendet.*
 
 ## Levelorder-Traversierung
 Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene ausgelesen, beginnend bei der Wurzel. Durch die fehlende Rekursivität müssen die jeweiligen Kinder-Knoten in einer Queue abgespeichert werden und nach und nach ausgelsen werden.  
@@ -84,6 +84,6 @@ Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene ausgelesen,
 Bezogen auf unser Beispiel 1 wäre das Ergebnis der Levelorder-Traversierung:
 Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (= Ebene 3) - Annika - Christine - Mara - Victoria (= Ebene 4).
 
-*Einsatzgebiet?*
+*Einsatzgebiet? Ein Anwendungsfall hierfür ist ein Orgchart, wo Teammitglieder auf der selben Führungsebene ausgegeben werden. Auch dieser Fall gilt nur für den Binärbaum, nicht jedoch für den AVL Baum.*
 
 # Klassen und Methoden
