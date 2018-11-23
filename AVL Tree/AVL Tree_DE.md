@@ -32,7 +32,7 @@ Beginnt man die Suche nach "Christine" bei der Wurzel, sind beim Binärbaum fün
 Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des AVL Baums. So lässt sich die Anzahl der Vergleichsaktionen bei großen Datenmengen erheblich verkürzen. Damit wird eine zufällig "glückliche" oder "unglückliche" Reihenfolge der Daten beim Einfügen in den Baum eliminiert.
 
 ### Beispiel 2
-Werden der Reihe nach die Ziffern 1 bis 9 in einen Binärbaum eingefügt, entspricht gilt dieser Binärbaum als "degenerier" und ist quasi eine Liste. Sucht man nun nach dem Inhalt '9', müssen neun Vergleichsoperationen durchgeführt werden, um den Inhalt zu finden. Im umgekehrten Fall - das Einlesen der Ziffern 9 bis 1 - wird auch eine Liste erstellt. Auch hierbei müssen bis zu neun Vergleichsaktionen durchgeführt werden, um den gesuchten Inhalt zu finden.
+Werden der Reihe nach die Ziffern 1 bis 9 in einen Binärbaum eingefügt, entspricht gilt dieser Binärbaum als "degenerier" Baum und ist quasi eine Liste. Sucht man nun nach dem Inhalt '9', müssen neun Vergleichsoperationen durchgeführt werden, um den Inhalt zu finden. Im umgekehrten Fall - das Einlesen der Ziffern 9 bis 1 - wird auch eine Liste erstellt. Auch hierbei müssen bis zu neun Vergleichsaktionen durchgeführt werden, um den gesuchten Inhalt zu finden.
 ![Suche in einem Binärbaum](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Probleme_Binaerbaum_V2.png)
 
 Die Erzeugung eines AVL Baums ist allerdings aufwendiger als die eines Binärbaums, da im Zweifelsfall mit jedem neuen einzufügenden Inhalt eine Neuausrichtung des AVL Baums stattfindet - was zusätzliche Rechenzeit erzeugt. Ein AVL Baum eignet sich daher vor allem, wenn bei der Initialisierung große Datenmengen eingelesen werden, die später nur noch punktuell ergänzt werden, dafür aber eine schnelle Suche nach Inhalten benötigt wird.
@@ -56,6 +56,17 @@ Die Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem 
 Mit den Daten von Beispiel 1 würde die Inorder-Traversierung folgendes Ergebnis liefern: Aaron - Annika - Carsten - Chris - Christine - Doro - Mara - Peter - Tim - Victor - Victoria.
 
 Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgelesen, d.h. der Inhalt der im AVL Baum ganz links steht. Diese Form der Traversierung sorgt für eine Sortierung von klein nach groß.
+
+*Spiegelt die symetrische Anordnung wider.*
+
+
+## Reverse-Inorder-Traversierung
+Die Reverse-Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
+1. rechter Teilbaum
+2. Wurzel
+3. linker Teilbaum  
+
+Mit den Daten von Beispiel 1 würde die Inorder-Traversierung folgendes Ergebnis liefern: Victoria - Victor - Tim - Peter - Mara - Doro - Christine - Chris - Carsten - Annika - Aaron.
 
 
 ## Preorder-Traversierung
