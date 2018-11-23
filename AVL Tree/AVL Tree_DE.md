@@ -49,9 +49,9 @@ In Binärbäumen und AVL Bäumen können die Inhalte in verschiedenen Reihenfolg
 
 ## Inorder-Traversierung
 Die Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
-1. linker Kind-Knoten
-2. Eltern-Knoten (Wurzel)
-3. rechter Kind-Knoten  
+1. linker Teilbaum
+2. Wurzel
+3. rechter Teilbaum  
 
 Mit den Daten von Beispiel 1 würde die Inorder-Traversierung folgendes Ergebnis liefern: Aaron - Annika - Carsten - Chris - Christine - Doro - Mara - Peter - Tim - Victor - Victoria.
 
@@ -60,9 +60,9 @@ Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgel
 
 ## Preorder-Traversierung
 Die Preorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
-1. Eltern-Knoten (Wurzel)
-2. linker Kind-Knoten
-3. rechter Kind-Knoten  
+1. Wurzel
+2. linker Teilbaum
+3. rechter Teilbaum  
 
 Die Reihenfolge der Preorder-Traversierung käme für Beispiel 1 zu folgendem Ergebnis: Doro - Carsten - Aaron - Annika - Chris - Christine - Tim - Peter - Mara - Victor - Victoria.
 
@@ -70,9 +70,9 @@ Die Reihenfolge der Preorder-Traversierung käme für Beispiel 1 zu folgendem Er
 
 ## Postorder-Traversierung
 Die Postorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
-1. linker Kind-Knoten
-2. rechter Kind-Knoten
-3. Eltern-Knoten (Wurzel)  
+1. linker Teilbaum
+2. rechter Teilbaum
+3. Wurzel  
 
 Bei der Postorder-Traversierung würde für Beispiel 1 folgendes Ergebnis angezeigt: Annika - Aaron - Christine - Chris - Carsten - Mara - Peter - Victoria - Victor - Tim
 
