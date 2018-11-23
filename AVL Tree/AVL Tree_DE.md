@@ -66,7 +66,7 @@ Die Preorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem
 
 Die Reihenfolge der Preorder-Traversierung käme für Beispiel 1 zu folgendem Ergebnis: Doro - Carsten - Aaron - Annika - Chris - Christine - Tim - Peter - Mara - Victor - Victoria.
 
-*Einsatzgbiet? Nur für Binärbaum: Hierdurch erfolgt eine sog. Polnische Notation. Diese wird angewendet, wenn in dem Baum mathematische Funktionen abgebildet werden. In diesem Fall erhält die Wurzel die Operation und die Blätter die Operanden.*
+*Einsatzgbiet? Nur für Binärbaum: Hierdurch erfolgt eine sog. Polnische Notation. Diese wird angewendet, wenn in dem Baum mathematische Funktionen abgebildet werden. In diesem Fall erhält die Wurzel die Operation und die Blätter die Operanden. Die Preorder-Traversierung eignet sich zum Abspeichern von Bäumen, denn man wenn die Elemente wieder einliest, erhält man den gleichen Baum.*
 
 ## Postorder-Traversierung
 Die Postorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
