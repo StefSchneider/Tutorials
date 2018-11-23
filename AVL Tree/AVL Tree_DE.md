@@ -86,4 +86,6 @@ Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (=
 
 *Einsatzgebiet? Ein Anwendungsfall hierfür ist ein Orgchart, wo Teammitglieder auf der selben Führungsebene ausgegeben werden. Auch dieser Fall gilt nur für den Binärbaum, nicht jedoch für den AVL Baum.*
 
+Dadurch, dass immer wieder zum Vorgängerknoten zurückgekehrt werden muss, ist diese Traversierungsart die rechenintensivste.
+
 # Klassen und Methoden
