@@ -84,7 +84,7 @@ Die Preorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem
 
 Die Reihenfolge der Preorder-Traversierung käme für Beispiel 1 zu folgendem Ergebnis: Doro - Carsten - Aaron - Annika - Chris - Christine - Tim - Peter - Mara - Victor - Victoria.
 
-*Einsatzgbiet? Nur für Binärbaum: Hierdurch erfolgt eine sog. Polnische Notation. Diese wird angewendet, wenn in dem Baum mathematische Funktionen abgebildet werden. In diesem Fall erhält die Wurzel die Operation und die Blätter die Operanden. Die Preorder-Traversierung eignet sich zum Abspeichern von Bäumen, denn man wenn die Elemente wieder einliest, erhält man den gleichen Baum.*
+*Einsatzgbiet? Nur für Binärbaum: Hierdurch erfolgt eine sog. Polnische Notation. Diese wird angewendet, wenn in dem Baum mathematische Funktionen abgebildet werden. In diesem Fall erhält die Wurzel die Operation und die Blätter die Operanden. Die Preorder-Traversierung eignet sich zum Abspeichern von Bäumen, denn man wenn die Elemente wieder einliest, erhält man den gleichen Baum. Rcitige Reihenfolge, um den Baum wieder zu rekonstruieren.*
 
 ***falsche Sortiereihenfolge***
 
@@ -110,9 +110,13 @@ Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (=
 
 Dadurch, dass immer wieder zum Vorgängerknoten zurückgekehrt werden muss, ist diese Traversierungsart die rechenintensivste.
 
+*Auslesen: von oben nach unten und von links nach rechts
+*Teil des Sortieralgorithmus vom Heapsort*
+
 # Klassen und Methoden
 
 
 # Weiterführende Links
 https://www.youtube.com/watch?v=EyrMyI3HG1g&index=5&list=PLeTe1lGv_iz5B85ZOH6VHMY2WtUo3nWQ3
+https://www.youtube.com/watch?v=5X8CkFBq_8k&index=4&list=PLeTe1lGv_iz5B85ZOH6VHMY2WtUo3nWQ3
 
