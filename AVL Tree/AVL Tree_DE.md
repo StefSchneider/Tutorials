@@ -6,7 +6,7 @@ Im Gegensatz dazu passt ein AVL Baum seine Knoten so an, dass die Höhe der Äst
 
 Der AVL Baum beginnt wie der Binärbaum mit einer sogenannten Wurzel. Diese besteht - wie alle weiteren Knoten auch - aus dem Inhalt und einem Zeiger auf einen linken Teilbaum (linkes Kind) und einem Zeiger auf einen rechten Teilbaum (rechtes Kind). Diese Zeiger verweisen bei der Neuanlage zunächst auf 'None'. Anschließend werden die Inhalte der Reihe nach in den Baum eingefügt. Dabei werden die neuen Inhalte mit den bereits im Baum verankerten Inhalte verglichen: Inhalte, die kleiner als das jeweilige Vergleichselement, werden in den linken Teilbaum eingefügt, Inhalte, die größer sind, werden in den rechten Teilbaum eingefügt.
 
-!["Aufbau eines Baums"] (https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau%20Knoten.png)
+!["Aufbau eines Baums"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau%20Knoten.png)
 
 *Kurzbescheibung Knoten + Grafik*
 
