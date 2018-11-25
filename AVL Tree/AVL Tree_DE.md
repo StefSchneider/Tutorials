@@ -1,10 +1,12 @@
 # Definition
-Ein AVL Baum ist eine Sonderform des Binärbaums. Ein Binärbaum besteht aus Elternknoten, die auf maximal zwei Kinderknoten verweisen. Dabei können die unterschiedlichen Äste des Binärbaums unterschiedlichen Höhen aufweisen.
+Ein AVL Baum ist eine Sonderform des Binärbaums. Ein Binärbaum besteht aus Elternknoten (Wurzel), die auf maximal zwei Teilbäume, die sogenannten Kinderknoten, verweisen. Dabei können die unterschiedlichen Äste des Binärbaums unterschiedlichen Höhen aufweisen.
 Im Gegensatz dazu passt ein AVL Baum seine Knoten so an, dass die Höhe der Äste gleich ist, d.h. die untersten Kinderknoten enden auf der gleichen Ebene.
 
 # Funktionsweise
 
-Der AVL Baum beginnt wir der Binärbaum mit einer sogenannten Wurzel. Diese besteht - wie alle weiteren Knoten auch - aus dem Inhalt und einem Zeiger auf ein linkes Kind und einem Zeiger auf ein rechtes Kind. Diese Zeiger verweisen bei der Neuanlage zunächst auf 'None'. Anschließend werden die Inhalte der Reihe nach in den Baum eingefügt. Dabei werden die neuen Inhalte mit den bereits im Baum verankerten Inhalte verglichen: Inhalte, die kleiner als das jeweilige Vergleichselement, werden links eingefügt, Inhalte, die größer sind, werden rechts eingefügt.
+Der AVL Baum beginnt wie der Binärbaum mit einer sogenannten Wurzel. Diese besteht - wie alle weiteren Knoten auch - aus dem Inhalt und einem Zeiger auf einen linken Teilbaum (linkes Kind) und einem Zeiger auf einen rechten Teilbaum (rechtes Kind). Diese Zeiger verweisen bei der Neuanlage zunächst auf 'None'. Anschließend werden die Inhalte der Reihe nach in den Baum eingefügt. Dabei werden die neuen Inhalte mit den bereits im Baum verankerten Inhalte verglichen: Inhalte, die kleiner als das jeweilige Vergleichselement, werden in den linken Teilbaum eingefügt, Inhalte, die größer sind, werden in den rechten Teilbaum eingefügt.
+
+!["Aufbau eines Baums"] (https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau%20Knoten.png)
 
 *Kurzbescheibung Knoten + Grafik*
 
@@ -55,9 +57,7 @@ Die Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem 
 
 Mit den Daten von Beispiel 1 würde die Inorder-Traversierung folgendes Ergebnis liefern: Aaron - Annika - Carsten - Chris - Christine - Doro - Mara - Peter - Tim - Victor - Victoria.
 
-Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgelesen, d.h. der Inhalt der im AVL Baum ganz links steht. Diese Form der Traversierung sorgt für eine Sortierung von klein nach groß.
-
-*Spiegelt die symetrische Anordnung wider.*
+Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgelesen, d.h. der Inhalt der im AVL Baum ganz links steht. Diese Form der Traversierung sorgt für eine Sortierung von klein nach groß. Die Inorder-Traversierung spiegelt somiz die symetrische Anordnung des Baums wider.
 
 
 ## Reverse-Inorder-Traversierung
@@ -67,6 +67,8 @@ Die Reverse-Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach fo
 3. linker Teilbaum  
 
 Mit den Daten von Beispiel 1 würde die Inorder-Traversierung folgendes Ergebnis liefern: Victoria - Victor - Tim - Peter - Mara - Doro - Christine - Chris - Carsten - Annika - Aaron.
+
+Mit der Reverse-Inorder-Traversierung wird der Baum also in umgekehrter Sortierreihenfolge ausgelesen. Sie ist eine eher selten genutzte Sonderform der Inorder-Traversierung.
 
 
 ## Preorder-Traversierung
