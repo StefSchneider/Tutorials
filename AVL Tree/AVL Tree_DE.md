@@ -52,66 +52,57 @@ In Binärbäumen und AVL Bäumen können die Inhalte in verschiedenen Reihenfolg
 
 
 ## Inorder-Traversierung
-Die Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
+Die Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem rekursiven Prinzip aus: LWR
 1. linker Teilbaum
 2. Wurzel
-3. rechter Teilbaum  
+3. rechter Teilbaum.  
 
 Mit den Daten von Beispiel 1 würde die Inorder-Traversierung folgendes Ergebnis liefern: Aaron - Annika - Carsten - Chris - Christine - Doro - Mara - Peter - Tim - Victor - Victoria.
 
 Durch das rekursive Auslesen der Inhalte, wird zuerst der kleinste Inhalt ausgelesen, d.h. der Inhalt der im AVL Baum ganz links steht. Diese Form der Traversierung sorgt für eine Sortierung von klein nach groß. Die Inorder-Traversierung spiegelt somiz die symetrische Anordnung des Baums wider.
 
-***falsche Sortierreihenfolge)***
 
 ## Reverse-Inorder-Traversierung
-Die Reverse-Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
+Die Reverse-Inorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem rekursiven Prinzip aus: RWL
 1. rechter Teilbaum
 2. Wurzel
-3. linker Teilbaum  
+3. linker Teilbaum.  
 
 Mit den Daten von Beispiel 1 würde die Inorder-Traversierung folgendes Ergebnis liefern: Victoria - Victor - Tim - Peter - Mara - Doro - Christine - Chris - Carsten - Annika - Aaron.
 
 Mit der Reverse-Inorder-Traversierung wird der Baum also in umgekehrter Sortierreihenfolge ausgelesen. Sie ist eine eher selten genutzte Sonderform der Inorder-Traversierung.
 
-***falsche Sortierreihenfolge***
-
 
 ## Preorder-Traversierung
-Die Preorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
+Die Preorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem rekursiven Prinzip aus: WLR
 1. Wurzel
 2. linker Teilbaum
-3. rechter Teilbaum  
+3. rechter Teilbaum.  
 
-Die Reihenfolge der Preorder-Traversierung käme für Beispiel 1 zu folgendem Ergebnis: Doro - Carsten - Aaron - Annika - Chris - Christine - Tim - Peter - Mara - Victor - Victoria.
+Die Reihenfolge der Preorder-Traversierung käme für Beispiel 1 zu folgendem Ergebnis: Doro - Annika - Aaron - Chris - Carsten - Christine - Peter - Mara - Victor - Tim - Victoria
 
-*Einsatzgbiet? Nur für Binärbaum: Hierdurch erfolgt eine sog. Polnische Notation. Diese wird angewendet, wenn in dem Baum mathematische Funktionen abgebildet werden. In diesem Fall erhält die Wurzel die Operation und die Blätter die Operanden. Die Preorder-Traversierung eignet sich zum Abspeichern von Bäumen, denn man wenn die Elemente wieder einliest, erhält man den gleichen Baum. Rcitige Reihenfolge, um den Baum wieder zu rekonstruieren.*
+Liest man einen Baums mithilfe der Preorder-Traversierung aus und speichert die Werte ab, lässt sich dieser Baum anschließend genauso rekonstruieren. Beim Binärbaum wird die Preorder-Traversierung zur sogenannten Polnischen Notation eingesetzt. Diese wird angewendet, wenn in dem Baum mathematische Funktionen abgebildet werden. In diesem Fall erhält die Wurzel die Operation und die Blätter die Operanden.
 
-***falsche Sortiereihenfolge***
 
 ## Postorder-Traversierung
-Die Postorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem Prinzip aus: 
+Die Postorder-Traversierung liest den Binärbaum oder den AVL Baum nach folgendem rekursiven Prinzip aus: LRW
 1. linker Teilbaum
 2. rechter Teilbaum
-3. Wurzel  
+3. Wurzel.  
 
-Bei der Postorder-Traversierung würde für Beispiel 1 folgendes Ergebnis angezeigt: Annika - Aaron - Christine - Chris - Carsten - Mara - Peter - Victoria - Victor - Tim
+Bei der Postorder-Traversierung würde für Beispiel 1 folgendes Ergebnis angezeigt: Aaron - Carsten - Christine - Chris - Annika - Mara - Tim - Victoria - Victor - Peter - Doro
 
-*Einsatzgebiet? Nur für Binärbaum: Hierdurch erfolgt eine sog. umgekehrte polnische Notation. Diese wird zur Abarbeitung von mathematischen Funktionen verwendet. Als erstes kommen die Operanden, dann die Operation. Diese Art des Auslesens wird im Compilerbau verwendet.*
+Beim Einsatz der Postorder-Traversierung erfolgt bei Binärbäumen eine sogenannte umgekehrte polnische Notation. Diese wird zur Abarbeitung von mathematischen Funktionen verwendet. Als erstes kommen die Operanden, dann die Operation. Diese Art des Auslesens wird im Compilerbau verwendet.
 
-***evtl. falsche Sortierreihenfolge***
 
 ## Levelorder-Traversierung
-Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene ausgelesen, beginnend bei der Wurzel. Durch die fehlende Rekursivität müssen die jeweiligen Kinder-Knoten in einer Queue abgespeichert werden und nach und nach ausgelsen werden.  
+Bei der Levelorder-Traversierung werden die Inhalte Ebene für Ebene, beginnend bei der Wurzel, und von links nach rechts ausgelesen. Durch die fehlende Rekursivität müssen die jeweiligen Kinder-Knoten in einer Queue abgespeichert werden und nach und nach ausgelsen werden. Dadurch, dass immer wieder zum Vorgängerknoten zurückgekehrt werden muss, ist diese Traversierungsart die rechenintensivste.
 
 Bezogen auf unser Beispiel 1 wäre das Ergebnis der Levelorder-Traversierung:
 Doro (= Ebene 1) - Carsten - Tim (= Ebene 2) - Aaron - Chris - Peter - Victor (= Ebene 3) - Annika - Christine - Mara - Victoria (= Ebene 4).
 
-*Einsatzgebiet? Ein Anwendungsfall hierfür ist ein Orgchart, wo Teammitglieder auf der selben Führungsebene ausgegeben werden. Auch dieser Fall gilt nur für den Binärbaum, nicht jedoch für den AVL Baum.*
+Levelorder-Traversierung werden beispielsweise für Orgacharts eingesetzt, wo Teammitglieder auf der selben Führungsebene ausgegeben werden. Auch dieser Fall gilt nur für den Binärbaum, nicht jedoch für den AVL Baum. Die Levelorder-Traversierung ist auch Teil des Sortieralgorhythmus des Heap-Sort.
 
-Dadurch, dass immer wieder zum Vorgängerknoten zurückgekehrt werden muss, ist diese Traversierungsart die rechenintensivste.
-
-*Auslesen: von oben nach unten und von links nach rechts
-*Teil des Sortieralgorithmus vom Heapsort*
 
 # Klassen und Methoden
 
