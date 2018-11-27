@@ -32,6 +32,9 @@ Um zu besteimmen, ob ein Re-Balancing durchgeführt werden muss, wird an jedem K
 *Rechtsrotation*
 
 
+*Bei Übergewicht rechts wird ein positives Vorzeichen eingesetzt, bei einem Übergewicht links ein negatives Vorzeichen. In der Literatur kann das aber auch anderherum sein, da es keine Normierung dafür gibt.*
+
+
 # Vorteile und Nachteile
 Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des AVL Baums. So lässt sich die Anzahl der Vergleichsaktionen bei großen Datenmengen erheblich verkürzen. Damit wird eine zufällig "glückliche" oder "unglückliche" Reihenfolge der Daten beim Einfügen in den Baum eliminiert.
 
