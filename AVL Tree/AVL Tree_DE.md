@@ -36,6 +36,20 @@ Um zu besteimmen, ob ein Re-Balancing durchgeführt werden muss, wird an jedem K
 
 *Bei Übergewicht rechts wird ein positives Vorzeichen eingesetzt, bei einem Übergewicht links ein negatives Vorzeichen. In der Literatur kann das aber auch anderherum sein, da es keine Normierung dafür gibt.*
 
+!["Aufbau AVL-Baum Schritt 1 bis 3"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_1.png)
+
+!["Aufbau AVL-Baum Schritt 4 bis 5"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_4.png)
+
+!["Aufbau AVL-Baum Schritt 6"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_6_V2.png)
+
+!["Aufbau AVL-Baum Rotation 1"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Rotation_1.png)
+
+!["Aufbau AVL-Baum Schritt 7"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_7.png)
+
+!["Aufbau AVL-Baum Rotation2"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Rotation_2.png)
+
+
+
 
 # Vorteile und Nachteile
 Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des AVL Baums. So lässt sich die Anzahl der Vergleichsaktionen bei großen Datenmengen erheblich verkürzen. Damit wird eine zufällig "glückliche" oder "unglückliche" Reihenfolge der Daten beim Einfügen in den Baum eliminiert.
