@@ -24,7 +24,9 @@ Beginnt man die Suche nach "Christine" bei der Wurzel, sind beim Binärbaum fün
 
 > **Die Anzahl der Vergleichaktionen, bis ein Inhalt gefunden wurde, entspricht beim AVL Baum maximal der Zahl der Ebenen, d.h der Gesamthöhe.**
 
-Das Verschieben der Knoten bei einem AVL-Baum nennt man Re-Balancing. Er wird immer dann durchgeführt, wenn ein Teilbaum zwei Ebenen mehr hat als der andere Teilbaum. Durch diese Neuordnung werden die Knoten verschoben, aus Elternknoten werden unter Umständen Kinderknoten und umgekehrt. Um zu besteimmen, ob ein Re-Balancing durchgeführt werden muss, wird an jedem Knoten ein sogenannter Balance-Wert ausgerechnet. Beträgt dieser Balance-Wert -2 oder +2, wird eine Rotation ausgelöst. Dabei wird bei Übergewicht rechts  ein positives Vorzeichen eingesetzt, bei einem Übergewicht links ein negatives Vorzeichen. In der Literatur kann das aber auch anderherum sein, da es keine Normierung dafür gibt.
+Das Verschieben der Knoten bei einem AVL-Baum nennt man Re-Balancing. Er wird immer dann durchgeführt, wenn ein Teilbaum zwei Ebenen mehr hat als der andere Teilbaum. Durch diese Neuordnung werden die Knoten verschoben, aus Elternknoten werden unter Umständen Kinderknoten und umgekehrt. Um zu besteimmen, ob ein Re-Balancing durchgeführt werden muss, wird an jedem Knoten ein sogenannter Balancewert ausgerechnet. Er errechnet sich aus der Differenz der unter dem Knoten liebenden Ebenen für den linken und den rechten Teilbaum. Hat beispielsweise der linke Teilbaum eines Knotens drei Unterebenen und der rechte Teilbaum nur eine Unterebene, beträgt der Balancewert dieses Knotens -2. Blätter haben den Balancewert 0
+
+Beträgt dieser Balance-Wert -2 oder +2, wird eine Rotation ausgelöst. Dabei wird bei Übergewicht rechts  ein positives Vorzeichen eingesetzt, bei einem Übergewicht links ein negatives Vorzeichen. In der Literatur kann das aber auch anderherum sein, da es keine Normierung dafür gibt.
 
 Das Re-Balancing erfolgt entweder mithilfe einer sogenannten Linksrotation oder einer Rechtsrotation. Teilweise werden auch mehrere Rotationen hintereinander durchgeführt, wenn ein neuer Knoten eingefügt wird oder ein Knoten aus dem AVL-Baum entfernt werden muss.
 
@@ -38,11 +40,11 @@ Zunächst wird mit dem Knoten "Peter" die Wurzel gebildet. Ihre Zeiger für das 
 
 Da kein Teilbaum mehr als zwei Ebenen als der jeweils andere Teilbaum hat, ist keine Rotation nötig. Der Aufbau ann durch das Einfügen neuer Inhalte fortgesetzt werden.
 
+Um den Knoten "Annika" einzufügen, wird sein Inhalt zunächst mit dem des Knotens "Peter" verglichen: Der Inhalt von "Annika" ist kleiner, deshalb wird die Suche im linken Teilbaum von "Peter" fortgesetzt. Anschließend erfolgt der Vergleich mit dem Inhalt des Knotens "Doro". Auch hier ist der Inhalt von "Annika" kleiner. Folglich wird der Knoten "Annika" als linkes Kind von "Doro" eingesetzt. Die Vergleiche für den Knoten "Mara" erfolgen analog, sodass "Mara" als rechtes Kind von "Doro" eingefügt wird. Beide Zeiger der Knoten "Annika" und "Mara" zeigen wieder auf 'None', da beide Knoten Blätter sind.
 
+!["Aufbau AVL-Baum Schritt 4 bis 5"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_4_V2.png)
 
-
-
-!["Aufbau AVL-Baum Schritt 4 bis 5"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_4.png)
+Auch nach dem 5. Schritt beträgt die Differenz der Ebenen aller Teilbäume weder -2 noch +2. Deshalb kann auf eine Neuausrichtung des AVL-Baums durch Rotation verzichtet werden.
 
 !["Aufbau AVL-Baum Schritt 6"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_6_V2.png)
 
@@ -53,7 +55,7 @@ Da kein Teilbaum mehr als zwei Ebenen als der jeweils andere Teilbaum hat, ist k
 !["Aufbau AVL-Baum Rotation2"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Rotation_2.png)
 
 
-
+*Einfache Rotation bei gleichem Vorzeichen, doppelte Rotation bei unterschiedlichem Vorzeichen.*
 
 # Vorteile und Nachteile
 Im Vergleich zum Binärbaum ist die Anzahl der Suchschritte gleich der Höhe des AVL Baums. So lässt sich die Anzahl der Vergleichsaktionen bei großen Datenmengen erheblich verkürzen. Damit wird eine zufällig "glückliche" oder "unglückliche" Reihenfolge der Daten beim Einfügen in den Baum eliminiert.
