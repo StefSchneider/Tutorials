@@ -2,6 +2,8 @@
 Ein AVL-Baum ist eine Sonderform des Binärbaums. Ein Binärbaum besteht aus Elternknoten (Wurzel), die auf maximal zwei Teilbäume, die sogenannten Kinderknoten, verweisen. Dabei können die unterschiedlichen Äste des Binärbaums unterschiedlichen Höhen aufweisen.
 Im Gegensatz dazu passt ein AVL-Baum seine Knoten so an, dass sich die Höhe der Teiläste um höchstens eine Ebene unterscheiden. Er ist damit höhenbalanciert. Der AVL-Baum als Datenstruktur wurde im Jahr 1962 von den sowjetischen Mathematikern Georgi Maximowitsch Adelson-Velski und Jewgeni Michailowitsch Landis vorgestellt und ist auch nach ihnen benannt.
 
+!["Darstellung Binäraum"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Darstellung_Binaerbaum_V2.png)
+
 # Funktionsweise
 
 Der AVL Baum beginnt wie der Binärbaum mit einer sogenannten Wurzel (root). Diese besteht - wie alle weiteren Knoten auch - aus dem Inhalt und einem Zeiger auf einen linken Teilbaum - auch linkes Kind (left child) genannt - und einem Zeiger auf einen rechten Teilbaum, dem sogenannten rechten Kind (right child) (-> Abbildung rechter Teil). Diese Zeiger verweisen bei der Neuanlage zunächst auf 'None'. Anschließend werden die Inhalte der Reihe nach in den Baum eingefügt. Dabei werden die neuen Inhalte mit den bereits im Baum verankerten Inhalte verglichen: Inhalte, die kleiner als das jeweilige Vergleichselement, werden in den linken Teilbaum eingefügt, Inhalte, die größer sind, werden in den rechten Teilbaum eingefügt. Die unterste Ebene wird auch Blatt (leaf) genannt.
