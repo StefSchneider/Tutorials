@@ -24,19 +24,23 @@ Beginnt man die Suche nach "Christine" bei der Wurzel, sind beim Binärbaum fün
 
 > **Die Anzahl der Vergleichaktionen, bis ein Inhalt gefunden wurde, entspricht beim AVL Baum maximal der Zahl der Ebenen, d.h der Gesamthöhe.**
 
-Das Verschieben der Knoten bei einem AVL-Baum nennt man Re-Balancing. Er wird immer dann durchgeführt, wenn ein Teilbaum mehr Ebenen hat als der andere Teilbaum. Durch diese Neuordnung werden die Knoten verschoben, aus Elternknoten werden unter Umständen Kinderknoten und umgekehrt.
+Das Verschieben der Knoten bei einem AVL-Baum nennt man Re-Balancing. Er wird immer dann durchgeführt, wenn ein Teilbaum zwei Ebenen mehr hat als der andere Teilbaum. Durch diese Neuordnung werden die Knoten verschoben, aus Elternknoten werden unter Umständen Kinderknoten und umgekehrt. Um zu besteimmen, ob ein Re-Balancing durchgeführt werden muss, wird an jedem Knoten ein sogenannter Balance-Wert ausgerechnet. Beträgt dieser Balance-Wert -2 oder +2, wird eine Rotation ausgelöst. Dabei wird bei Übergewicht rechts  ein positives Vorzeichen eingesetzt, bei einem Übergewicht links ein negatives Vorzeichen. In der Literatur kann das aber auch anderherum sein, da es keine Normierung dafür gibt.
 
 Das Re-Balancing erfolgt entweder mithilfe einer sogenannten Linksrotation oder einer Rechtsrotation. Teilweise werden auch mehrere Rotationen hintereinander durchgeführt, wenn ein neuer Knoten eingefügt wird oder ein Knoten aus dem AVL-Baum entfernt werden muss.
 
-Um zu besteimmen, ob ein Re-Balancing durchgeführt werden muss, wird an jedem Knoten ein sogenannter Balnce-Wert ausgerechnet. Beträgt dieser Balance-Wert +2, wird eine Rotation ausgelöst.
-*Re-Balancing*
-*Linksrotation*
-*Rechtsrotation*
+### Beispiel 2
+
+In einen neu aufzubauenden AVL-Baum werden nach und nach Knoten mit folgenden Inhalten engefügt: (1): Peter, (2): Tim, (3): Doro, (4): Annika, (5): Mara, (6): Aaron, (7): Victor, (8):   Chris, (9): Carsten, (10): Victoria, (11): Christine.
+
+Zunächst wird mit dem Knoten "Peter" die Wurzel gebildet. Ihre Zeiger für das linke und das rechte Kind zeigen zunächst auf 'None'. In Schritt 2 wird der Knoten "Tim" eingefügt. Dabei wird zunächst üerprüft, ob sein Inhalt größer ist als der Inhalt von Knoten "Peter". Da dies der Fall ist, wird der Knoten "Tim" als rechtes Kind des Knotens "Peter" eingefügt. Als drittes Element wird der Knoten "Doro" eingefügt. Ach hierbei findet zunächst der Vergleich mit dem Knoten "Peter" statt. Da dessen Inhalt größer ist als der Inhalt des Knotens "Doro" wird dieser als linker Teilbaum der Wurzel eingefügt. Die jeweiligen Zeiger der Knoten "Doro" und "Tim" zeigen wieder auf 'None'.
+
+!["Aufbau AVL-Baum Schritt 1 bis 3"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_1_V2.png)
+
+Da kein Teilbaum mehr als zwei Ebenen als der jeweils andere Teilbaum hat, ist keine Rotation nötig. Der Aufbau ann durch das Einfügen neuer Inhalte fortgesetzt werden.
 
 
-*Bei Übergewicht rechts wird ein positives Vorzeichen eingesetzt, bei einem Übergewicht links ein negatives Vorzeichen. In der Literatur kann das aber auch anderherum sein, da es keine Normierung dafür gibt.*
 
-!["Aufbau AVL-Baum Schritt 1 bis 3"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_1.png)
+
 
 !["Aufbau AVL-Baum Schritt 4 bis 5"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_4.png)
 
