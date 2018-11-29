@@ -46,6 +46,10 @@ Um den Knoten "Annika" einzufügen, wird sein Inhalt zunächst mit dem des Knote
 
 Auch nach dem 5. Schritt beträgt die Differenz der Ebenen aller Teilbäume weder -2 noch +2. Deshalb kann auf eine Neuausrichtung des AVL-Baums durch Rotation verzichtet werden.
 
+Im nächsten Schritt wird der Knoten "Aaron" eingefügt. Die Vergleiche der Inhalte ergeben, dass der Knoten im linken Teilbaum als eine weitere Ebene unterhalb des Knotens "Annika" eingefügt werden muss. Betrachtet man nun erneut die Höhendifferenzen der Ebenen, stellt man fest, dass zwischen linkem und rechtem Teilbaum eine Differenz von zwei Ebenen besteht. Das zeigen auch die Balancewerte: Der Knoten "Peter" weist einen Balancewert von -2 auf. Damit wird eine Rotation eingeleitet. 
+
+Da man bei den Balancewerten auf der jeweils unterstern Ebene startet und sich nach oben Richtung Wurzel vorarbeitet, werden für die Entscheidung, welche Rotation durchzuführen ist, auch die Knoten unterhalb von "Peter" herangezogen. Da das Übergewicht im linken Teilbaum besteht, wird der Balancewert des Knotens "Doro" betrachtet. Er beträgt -1. Weil die Vorzeichen von "Doro" und "Peter" gleich sind, genügt eine einfache Rotation um den Knoten "Doro".
+
 !["Aufbau AVL-Baum Schritt 6"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Schritt_6_V2.png)
 
 !["Aufbau AVL-Baum Rotation 1"](https://github.com/stefschneider1970/Tutorials/blob/master/AVL%20Tree/images/Aufbau_AVL_Baum_Rotation_1.png)
